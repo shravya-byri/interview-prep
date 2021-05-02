@@ -46,7 +46,15 @@ public class LinkedList {
         }
         return head;
     }
-
+    public static Node runnerTechniqueMidNode(Node head){
+        Node slow = head;
+        Node fast = head;
+        while (fast.next != null && fast.next.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow;
+    }
     public static Node getMiddleNode(Node head){
         int count = 0;
         Node current1 = head;
@@ -68,12 +76,12 @@ public class LinkedList {
         insert(6, head);
         insert(7,head);
         insert (8, head);
-//        insert(9, head);
+        insert(9, head);
         insert(10, head);
         printLL(head);
 //        Node p = delete(head,2);
 //        printLL(p);
-        System.out.print(getMiddleNode(head).data);
+        System.out.print(runnerTechniqueMidNode(head).data);
 
     }
 }
