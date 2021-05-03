@@ -55,6 +55,19 @@ public class LinkedList {
         }
         return slow;
     }
+    public static Node getNthNodeFromLast(Node head, int n) {
+        Node slow = head;
+        Node fast = head;
+        for ( int i = 0; i < n; i ++){
+            fast = fast.next;
+        }
+        while (fast != null) {
+            fast = fast.next;
+            slow = slow.next;
+        }
+        return slow;
+    }
+
     public static Node getMiddleNode(Node head){
         int count = 0;
         Node current1 = head;
@@ -81,7 +94,7 @@ public class LinkedList {
         printLL(head);
 //        Node p = delete(head,2);
 //        printLL(p);
-        System.out.print(runnerTechniqueMidNode(head).data);
+        System.out.print(getNthNodeFromLast(head,5).data);
 
     }
 }
