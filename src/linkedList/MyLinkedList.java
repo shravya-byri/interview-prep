@@ -1,7 +1,7 @@
 package linkedList;
 
-public class LinkedList {
-    static class Node {
+public class MyLinkedList {
+    public static class Node {
         int data;
         Node next;
         public Node(int d, Node n) {
@@ -94,7 +94,7 @@ public class LinkedList {
         printLL(head);
 //        Node p = delete(head,2);
 //        printLL(p);
-        System.out.print(getNthNodeFromLast(head,5).data);
+        System.out.print(getNthNodeFromLast(head,3).data);
 
     }
 }
