@@ -35,7 +35,7 @@ public class Partition {
         Node head = new Node(6, null);
         insert(5,head);
         insert(8,head);
-        insert(5,head);
+        insert(0,head);
         insert(10,head);
         insert(2,head);
         insert(2,head);
