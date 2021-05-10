@@ -60,13 +60,13 @@ public class SumList {
     }
 
     public static void main(String[] args) {
-        Node head1 = new Node(7, null);
-        insert(1,head1);
+        Node head1 = new Node(9, null);
         insert(7,head1);
-        insert(4,head1);
-        Node head2 = new Node(2, null);
-        insert(9,head2);
+        insert(8,head1);
+       // insert(4,head1);
+        Node head2 = new Node(6, null);
         insert(5,head2);
+        insert(8,head2);
         printLL(head1);
         System.out.println("+");
         printLL(head2);
