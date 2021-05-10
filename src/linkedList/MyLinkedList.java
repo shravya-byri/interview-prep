@@ -10,7 +10,18 @@ public class MyLinkedList {
         }
     }
 
-
+      public static Node reversal(Node head) {
+        Node current = head;
+        Node p = null;
+        Node n = null;
+        while (current != null) {
+            n = current.next;
+            current.next = p;
+            p = current;
+            current = n;
+        }
+        return p;
+    }
     public static Node insert(int n, Node head) {
         if ( head == null) {
             return new Node(n, null);
