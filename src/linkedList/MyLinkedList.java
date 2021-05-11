@@ -101,11 +101,12 @@ public class MyLinkedList {
         insert(7,head);
         insert (8, head);
         insert(9, head);
-        insert(10, head);
+        //insert(10, head);
         printLL(head);
 //        Node p = delete(head,2);
 //        printLL(p);
-        System.out.print(getNthNodeFromLast(head,3).data);
+        //System.out.print(getNthNodeFromLast(head,3).data);
+        System.out.println(runnerTechniqueMidNode(head).data);
 
     }
 }
