@@ -3,7 +3,8 @@ import static linkedList.MyLinkedList.*;
 
 
 public class LoopDetection {
-    static Node loopDetection (Node head) {
+
+    static Node detectLoop(Node head) {
         Node slow = head;
         Node fast = head;
         while ((slow != null) && fast != null && fast.next != null) {
@@ -16,17 +17,17 @@ public class LoopDetection {
 
      return null;
     }
-    static Node FindNode(Node head) {
-        Node connect = loopDetection(head);
+    static Node findNode(Node head) {
+        Node connect = detectLoop(head);
+        if (connect == null){
+            return null;
+        }
         Node meet = head;
-        while (connect != null) {
+        while (connect != meet) {
             connect = connect.next;
             meet = meet.next;
-            if (connect == meet) {
-                return connect;
-            }
         }
-        return null;
+        return connect;
 
     }
     public static void main(String[] args) {
@@ -43,7 +44,7 @@ public class LoopDetection {
             current = current.next;
         }
         current.next = head.next.next.next;
-        Node res = FindNode(head);
+        Node res = findNode(head);
 
         if (res != null){
             System.out.println(res.data);
