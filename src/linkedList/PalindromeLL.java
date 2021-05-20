@@ -29,6 +29,7 @@ public class PalindromeLL {
         head = insert(1, head);
         insert(2,head);
         insert(3,head);
+        insert(3,head);
         insert(2,head);
         insert(1,head);
         //insert(3,head);
