@@ -14,7 +14,7 @@ public class MyQueue {
             rear = 0;
             front = 0;
             a[rear] = i;
-        } else if (rear < a.length) {
+        } else if (rear < a.length-1) {
             rear++;
             a[rear] = i;
         } else {
