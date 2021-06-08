@@ -56,6 +56,9 @@ public class MyQueue {
         m.push(8);
         m.pop();
         m.pop();
+        m.pop();
+        m.pop();
+
 
 
 
