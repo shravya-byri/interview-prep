@@ -28,7 +28,7 @@ public class MyQueue {
             System.out.println("The Queue is empty");
         } else if (front == rear) {
             front = rear = -1;
-        } else{
+        } else {
             front++;
         }
         printQueue();
@@ -53,12 +53,14 @@ public class MyQueue {
         m.push(9);
         m.push(10);
         m.pop();
+        m.pop();
+        m.pop();
+        m.pop();
+        m.pop();
         m.push(8);
-        m.pop();
-        m.pop();
-        m.pop();
-        m.pop();
-
+        m.push(13);
+        m.push(200);
+        m.push(50);
 
 
 
