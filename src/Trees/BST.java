@@ -49,7 +49,7 @@ public class BST {
 
     }
     public static void main(String[] args) {
-        ArrayList<Integer> a = new ArrayList<Integer>(Arrays.asList(3,2,5,4,6));
+        ArrayList<Integer> a = new ArrayList<Integer>(Arrays.asList(3,git 2,5,4,6));
         Node root = null;
         for(int i = 0; i < a.size(); i++) {
             root = insertBST(root,a.get(i));
