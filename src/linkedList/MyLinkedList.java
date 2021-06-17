@@ -44,7 +44,7 @@ public class MyLinkedList {
 
     }
 
-    public static Node delete(Node head, int n) {
+    public static Node delete(Node head, int n)  {
         if ( n == 0){
             head = head.next;
         } else {
