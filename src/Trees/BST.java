@@ -28,6 +28,21 @@ public class BST {
         }
         return root;
     }
+    public static int countNumberOfNodes(Node root) {
+        int r = 0;
+        int l = 0;
+
+        if (root != null) {
+
+            l = countNumberOfNodes(root.left);
+
+            r = countNumberOfNodes(root.right);
+           // counter++;
+            return r + l + 1;
+        }
+        else return 0;
+
+    }
 
     public static void levelOrderPrinting(Node root){
         Deque<Node> q = new ArrayDeque<>();
@@ -49,12 +64,13 @@ public class BST {
 
     }
     public static void main(String[] args) {
-        ArrayList<Integer> a = new ArrayList<Integer>(Arrays.asList(3,git 2,5,4,6));
+        ArrayList<Integer> a = new ArrayList<Integer>(Arrays.asList(3,8,5,9,6));
         Node root = null;
         for(int i = 0; i < a.size(); i++) {
             root = insertBST(root,a.get(i));
         }
-        levelOrderPrinting(root);
+        //levelOrderPrinting(root);
+        System.out.print(countNumberOfNodes(root));
     }
 
 }
