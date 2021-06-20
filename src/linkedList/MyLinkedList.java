@@ -1,5 +1,7 @@
 package linkedList;
 
+import java.util.ArrayList;
+
 public class MyLinkedList {
     public static class Node {
         int data;
@@ -94,6 +96,12 @@ public class MyLinkedList {
         result = current2;
         return result;
     }
+    public static int sumList(Node current) {
+        if(current == null) return 0;
+        else {
+            return sumList(current.next) + current.data;
+        }
+    }
 
     public static void main(String[] args) {
        Node head = insert(5,null);
@@ -106,7 +114,7 @@ public class MyLinkedList {
 //        Node p = delete(head,2);
 //        printLL(p);
         //System.out.print(getNthNodeFromLast(head,3).data);
-        System.out.println(runnerTechniqueMidNode(head).data);
-
+       // System.out.println(runnerTechniqueMidNode(head).data);
+          System.out.println(sumList(head));
     }
 }

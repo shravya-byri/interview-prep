@@ -63,6 +63,33 @@ public class BST {
         }
 
     }
+    public static int totalSum(Node current) {
+        int l = 0;
+        int m = 0;
+        if (current != null) {
+           l = totalSum(current.left);
+//            System.out.println(l);
+           m = totalSum(current.right);
+            return l + m + current.data;
+        }
+        return 0;
+    }
+    public static int sum(Node root) {
+        if (root == null) {
+            return 0;
+        } else {
+            return sum(root.left) + sum(root.right) + root.data;
+        }
+    }
+    public static int totalCount(Node root) {
+        if (root == null) return 0;
+        else {
+            return totalCount(root.left) + totalCount(root.right) + 1;
+        }
+    }
+    public static int sumList(ArrayList<Integer> a) {
+        return 0;
+    }
     public static void main(String[] args) {
         ArrayList<Integer> a = new ArrayList<Integer>(Arrays.asList(3,8,5,9,6));
         Node root = null;
@@ -70,7 +97,7 @@ public class BST {
             root = insertBST(root,a.get(i));
         }
         //levelOrderPrinting(root);
-        System.out.print(countNumberOfNodes(root));
+        System.out.println(" Total Sum: " + totalCount(root));
     }
 
 }
