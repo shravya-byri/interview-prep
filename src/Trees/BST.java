@@ -44,6 +44,12 @@ public class BST {
 
     }
 
+    public static int maxOf(int a, int b) {
+        if (a > b) {
+            return a;
+        } else return b;
+    }
+
     public static void levelOrderPrinting(Node root){
         Deque<Node> q = new ArrayDeque<>();
         if (root == null) {
@@ -87,17 +93,23 @@ public class BST {
             return totalCount(root.left) + totalCount(root.right) + 1;
         }
     }
+    public static int depthOfTree(Node root) {
+        if (root == null) {
+            return 0;
+        } else
+            return maxOf(depthOfTree(root.right), depthOfTree(root.left)) + 1;
+    }
     public static int sumList(ArrayList<Integer> a) {
         return 0;
     }
     public static void main(String[] args) {
-        ArrayList<Integer> a = new ArrayList<Integer>(Arrays.asList(3,8,5,9,6));
+        ArrayList<Integer> a = new ArrayList<Integer>(Arrays.asList(3,8,5,9,6,1,7));
         Node root = null;
         for(int i = 0; i < a.size(); i++) {
             root = insertBST(root,a.get(i));
         }
         //levelOrderPrinting(root);
-        System.out.println(" Total Sum: " + totalCount(root));
+        System.out.println(depthOfTree(root));
     }
 
 }
