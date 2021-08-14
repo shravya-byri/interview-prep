@@ -21,3 +21,4 @@ public class MaxMin {
         return min + max;
     }
 }
+
