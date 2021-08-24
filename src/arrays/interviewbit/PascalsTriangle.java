@@ -6,9 +6,17 @@ import java.util.List;
 
 public class PascalsTriangle {
     public static void main(String[] args) {
-        int n = 11;
-       // System.out.println(Solve(n));
-        Solve(n);
+        int n = 3;
+       System.out.println(solution(n));
+        //Solve(n);
+    }
+    public static ArrayList<Integer> solution(int n) {
+        ArrayList<ArrayList<Integer>> m = new ArrayList<>();
+        ArrayList<Integer> k = new ArrayList<>();
+        m = Solve(n+1);
+        k = m.get(n);
+        return k;
+
     }
     public static ArrayList<ArrayList<Integer>> Solve(int n) {
         ArrayList<Integer> one = new ArrayList<>();
