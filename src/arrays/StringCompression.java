@@ -2,7 +2,7 @@ package arrays;
 
 public class StringCompression {
     public static void main(String[] args) {
-        String s = "aabbbccc";
+        String s = "aabbcccccccc";
         System.out.println(updateCompressedString(s));
     }
     static String updateCompressedString(String s){
