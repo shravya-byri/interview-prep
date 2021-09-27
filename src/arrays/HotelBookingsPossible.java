@@ -14,7 +14,8 @@ public class HotelBookingsPossible {
     public static boolean isPossible(ArrayList<Integer> A,ArrayList<Integer> D, int C) {
 
         Collections.sort(A);
-        Collections.sort(D);
+        Collections.sort(D); /* sorting: arrival times will be sorted, departure time sorted mens the same person
+        need not go. any other person can go. just that the room should be available before other room is occupies*/
          for(int i = C; i < A.size(); i++) {
              if(A.get(i) <= D.get(i-C)) {
                  return false;

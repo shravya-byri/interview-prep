@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class PalindromePermutation {
     public static void main(String[] args) {
-        String s = "nitinamma";
+        String s = "nitinammal";
         System.out.println(isPalindromePermutation(s.toLowerCase()));
     }
 

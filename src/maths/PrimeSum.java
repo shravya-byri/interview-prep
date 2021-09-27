@@ -22,7 +22,6 @@ public class PrimeSum {
         return res;
     }
     public static boolean isPrime(int N) {
-            // Corner case
             if (N <= 1)
                 return false;
             for (int i = 2; i <= Math.sqrt(N); i++)
