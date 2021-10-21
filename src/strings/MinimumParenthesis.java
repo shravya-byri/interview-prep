@@ -2,13 +2,12 @@ package strings;
 
 public class MinimumParenthesis {
     public static void main(String[] args) {
-        String S = "())))))))))";
+        String S = ")())(";
         System.out.println(solve(S));
     }
     public static int solve(String A) {
         int k = 0;
         int count = 0;
-        int count1 = 0;
         for (int i = 0; i < A.length(); i++) {
             if (A.charAt(i) == '(') {
                 count++;
@@ -19,13 +18,12 @@ public class MinimumParenthesis {
                         count = k;
                     } else{
                         count--;
-                        count1++;
                     }
                 }
 
             }
 
         }
-        return count1;
+        return count;
     }
 }
